@@ -8,7 +8,7 @@ function App() {
 
   // name , email , address , city , pin code , mobile, landline
 
-  const [user, setUser] = useState(data);
+  const [user, setUser] = useState(data); //[1,2]
 
   // const onClick = (e) => {
   //   let value = e.target.innerText;
@@ -16,10 +16,11 @@ function App() {
   //   temp.username = temp.username + value;
   //   setUser(temp);
   // };
+
   const onChange = (e) => {
     const fieldname = e.target.id;
-
     let value = e.target.value;
+
     let temp = { ...user };
 
     if (fieldname == "username") {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <form>
+      {user.username}
       <div className="input-field">
         <label htmlFor="username">username</label>
         <input id="username" onChange={onChange} value={user.username} />
