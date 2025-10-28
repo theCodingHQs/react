@@ -1,8 +1,9 @@
 import "./navbar.css";
 
 const Navbar = (props) => {
+  console.log(props);
   return (
-    <nav className={props.className}>
+    <nav>
       <span className="logo">Logo</span>
 
       <ul>
@@ -14,7 +15,7 @@ const Navbar = (props) => {
       </ul>
 
       <div>
-        <div>User</div>
+        <div>{props.userName}</div>
       </div>
     </nav>
   );
