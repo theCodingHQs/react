@@ -1,4 +1,5 @@
 import "./App.css";
+import UserForm2 from "./pages/user-form-2/user-form";
 import UserForm from "./pages/user-form/user-form";
 import User from "./pages/user/user";
 
@@ -13,7 +14,10 @@ function App() {
   return (
     <>
       <User user={data} />
-      <UserForm data={data} />
+      <div style={{ display: "flex" }}>
+        <UserForm data={data} />
+        <UserForm2 data={data} />
+      </div>
     </>
   );
 }

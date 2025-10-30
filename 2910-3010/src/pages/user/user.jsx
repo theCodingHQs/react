@@ -2,7 +2,7 @@ import { style } from "./style";
 
 const User = function (props) {
   return (
-    <div style={style.container}>
+    <div className="bg-primary p-4 d-flex flex-column gap-2">
       <div style={style.inputGroup}>
         <span style={style.fieldLabel}>Name - </span>
         <span>{props.user.name}</span>
