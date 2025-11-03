@@ -5,19 +5,19 @@ const User = function (props) {
     <div className="bg-primary p-4 d-flex flex-column gap-2">
       <div style={style.inputGroup}>
         <span style={style.fieldLabel}>Name - </span>
-        <span>{props.user.name}</span>
+        <span style={style.fieldValue}>{props.user.name}</span>
       </div>
       <div style={style.inputGroup}>
         <span style={style.fieldLabel}>Age - </span>
-        <span>{props.user.age}</span>
+        <span style={style.fieldValue}>{props.user.age}</span>
       </div>
       <div style={style.inputGroup}>
         <span style={style.fieldLabel}>Address - </span>
-        <span>{props.user.address}</span>
+        <span style={style.fieldValue}>{props.user.address}</span>
       </div>
       <div style={style.inputGroup}>
         <span style={style.fieldLabel}>Mobile - </span>
-        <span>{props.user.mobile}</span>
+        <span style={style.fieldValue}>{props.user.mobile}</span>
       </div>
     </div>
   );

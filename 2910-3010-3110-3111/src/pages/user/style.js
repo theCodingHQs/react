@@ -5,7 +5,7 @@ export const style = {
         flexDirection: "column",
         gap: "4px",
         background: "red",
-        padding: "100px",
+        padding: "10px",
         borderRadius: "5px",
         boxShadow:
             "10px 10px 20px #000, 10px 10px 30px #fff4, inset 10px 10px 20px #fffa, inset -10px -10px 20px #000",
@@ -18,6 +18,11 @@ export const style = {
         textAlign: "start",
         display: "flex",
         justifyContent: "space-between",
+    },
+    fieldValue: {
+        fontSize: '20px',
+        fontWeight: "bold",
+        color: '#09e',
     },
     fieldLabel: {
         color: "#666",
