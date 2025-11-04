@@ -43,6 +43,7 @@ const UserForm2 = (props) => {
       }}
     >
       <h1>User Form - 2 </h1>
+      {user.name}
       <div style={globalStyle.inputGroup}>
         <label style={globalStyle.fieldLabel}>Name - </label>
         <input value={user.name} onChange={handleNameChange} />

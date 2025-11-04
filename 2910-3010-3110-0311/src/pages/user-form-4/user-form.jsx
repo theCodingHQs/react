@@ -15,6 +15,7 @@ const UserForm4 = (props) => {
   const handleChange = (e) => {
     const id = e.target.id; // "name" | "age" | "address" | "mobile"
     const value = e.target.value;
+
     setUser({ ...user, [id]: value });
   };
 
