@@ -3,7 +3,7 @@ import Form from "./components/form";
 import Data from "./components/data";
 
 function App() {
-  const [value, setValue] = useState("...");
+  const [value, setValue] = useState("hello");
 
   return (
     <div>
