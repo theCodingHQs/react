@@ -1,6 +1,6 @@
 import React from "react";
 
-const Users = (props) => {
+const UsersTable = ({ users }) => {
   return (
     <div className="bg-amber-100 p-4 h-fit rounded shadow-xl border border-amber-200">
       <h1 className="font-bold">Users List</h1>
@@ -14,16 +14,18 @@ const Users = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.users.map((user) => {
+          {users.map((user, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td className="bg-amber-200 border border-white">
                   {user.name}
                 </td>
                 <td className="bg-amber-200 border border-white">
                   {user.email}
                 </td>
-                <td className="bg-amber-200 border border-white">Mobile</td>
+                <td className="bg-amber-200 border border-white">
+                  {user.mobile}
+                </td>
               </tr>
             );
           })}
@@ -33,4 +35,4 @@ const Users = (props) => {
   );
 };
 
-export default Users;
+export default UsersTable;
