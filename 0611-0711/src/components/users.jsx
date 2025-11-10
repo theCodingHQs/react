@@ -11,6 +11,7 @@ const UsersTable = ({ users }) => {
             <th className=" bg-amber-300  px-1">Name</th>
             <th className=" bg-amber-300  px-1">Email</th>
             <th className=" bg-amber-300  px-1">Mobile</th>
+            <th className=" bg-amber-300  px-1">Role</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,9 @@ const UsersTable = ({ users }) => {
                 </td>
                 <td className="bg-amber-200 border border-white">
                   {user.mobile}
+                </td>
+                <td className="bg-amber-200 border border-white">
+                  {user.role || "N/A"}
                 </td>
               </tr>
             );
