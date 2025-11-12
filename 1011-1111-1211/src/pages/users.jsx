@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./navbar";
 import axios from "axios";
 
 const Users = () => {
@@ -10,6 +9,9 @@ const Users = () => {
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         setUsers(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
       });
     console.log(d);
   };
