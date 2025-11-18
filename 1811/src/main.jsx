@@ -2,20 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { UserContext } from "./contexts/user.jsx";
-
-const user = {
-  name: "Aakash",
-  age: 23,
-  address: "pune",
-};
-
-const value = { user, authInfo: { token: "haggsjdgvjyfkvjh" } };
+import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <UserContext value={value}>
+    <BrowserRouter>
       <App />
-    </UserContext>
+    </BrowserRouter>
   </StrictMode>
 );
