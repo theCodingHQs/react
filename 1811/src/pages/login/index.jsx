@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from "../../configs/axios";
 
 const Login = () => {
   const [info, setInfo] = useState({});
@@ -12,10 +12,10 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    axios
-      .post("http://localhost:4000/api/auth/login", info)
+    api
+      .post("/auth/login", info)
       .then((response) => {
-        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("token", response.token);
         navigate("/");
       })
       .catch((err) => {
