@@ -5,7 +5,7 @@ const api = axios.create({
     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
 })
 
-api.interceptors.response.use((response) => {
+api.interceptors.response.use((response) => { // { data:{} , config:{} }
     return response.data
 })
 

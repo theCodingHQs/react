@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "../../components/ui/modal";
 import api from "../../configs/axios";
+import { useItems } from "../../hooks/item";
 
 const Home = () => {
-  const [data, setData] = useState([]);
+  const { data, getItems } = useItems();
   const [newItem, setNewItem] = useState({});
 
   const handleChange = (event) => {
@@ -17,16 +18,6 @@ const Home = () => {
       if (response.id) getItems();
     });
   };
-
-  const getItems = () => {
-    api.get("/items").then((response) => {
-      setData(response);
-    });
-  };
-
-  useEffect(() => {
-    getItems();
-  }, []);
 
   return (
     <div className="min-h-screen bg-blue-600  gap-4 flex  content-start flex-wrap">
